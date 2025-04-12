@@ -12,7 +12,8 @@ Welcome to my personal portfolio! This website is designed and developed using *
 
 ## 🚀 Live Demo
 
-👉 [Click here to view my portfolio](https://your-username.github.io/portfolio)
+👉 [Click here to view my portfolio]
+[(https://priyankapinky2004.github.io/Priyanka-Gowda-Portfolio/)]
 
 ## 🛠️ Tech Stack
 
