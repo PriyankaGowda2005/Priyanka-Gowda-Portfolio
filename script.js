@@ -269,54 +269,63 @@ function updateRepositories(repos) {
             });
         });
         // Initialize EmailJS with your User ID
-// Initialize EmailJS with your User ID
-emailjs.init('duSFSgzTE9bLs_4ty');
+// // Initialize EmailJS with your Public Key
+// import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+// emailjs.init('KHYUKWuIOzs8rGb2I');
 
-const contactForm = document.getElementById('contact-form');
-const formAlert = document.getElementById('form-alert');
-const submitBtn = document.getElementById('submit-btn');
+// const contactForm = document.getElementById('contact-form');
+// const formAlert = document.getElementById('form-alert');
+// const submitBtn = document.getElementById('submit-btn');
 
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+// contactForm.addEventListener('submit', async (e) => {
+//     e.preventDefault();
+
+//     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+//     submitBtn.disabled = true;
+
+//     const formData = new FormData(contactForm);
+//     const data = {
+//         title: "New Message",   // optional
+//         name: formData.get('name'),
+//         email: formData.get('email'),
+//         subject: formData.get('subject'),
+//         message: formData.get('message')
+//     };
+
+//     try {
+//         // Send the email via EmailJS
+//         await emailjs.send('service_d8sfxs9', 'template_3ernr8k', data);
+
+//         showAlert("Thank you for your message! I'll get back to you soon.", 'success');
+//         contactForm.reset();
+
+//     } catch (error) {
+//         console.error('EmailJS Error:', error);
+//         showAlert('Sorry, there was an error sending your message. Please try again.', 'error');
+//     } finally {
+//         submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+//         submitBtn.disabled = false;
+//     }
+// });
+
+// function showAlert(message, type) {
+//     formAlert.textContent = message;
+//     formAlert.className = `alert alert-${type} show`;
+
+//     setTimeout(() => {
+//         formAlert.classList.remove('show');
+//     }, 5000);
+// }
+
+
+// function showAlert(message, type) {
+//     formAlert.textContent = message;
+//     formAlert.className = `alert alert-${type} show`;
     
-    // Show loading state
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-    submitBtn.disabled = true;
-
-    // Get form data
-    const formData = new FormData(contactForm);
-    const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        subject: formData.get('subject'),
-        message: formData.get('message')
-    };
-
-    try {
-        // Send the email via EmailJS
-        await emailjs.send('service_t0l1aeh', 'template_3ernr8k', data);
-
-        // Show success message
-        showAlert("Thank you for your message! I'll get back to you soon.", 'success');
-        contactForm.reset();
-    } catch (error) {
-        console.error('EmailJS Error:', error);
-        showAlert('Sorry, there was an error sending your message. Please try again.', 'error');
-    } finally {
-        // Reset button
-        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-        submitBtn.disabled = false;
-    }
-});
-
-function showAlert(message, type) {
-    formAlert.textContent = message;
-    formAlert.className = `alert alert-${type} show`;
-    
-    setTimeout(() => {
-        formAlert.classList.remove('show');
-    }, 5000);
-}
+//     setTimeout(() => {
+//         formAlert.classList.remove('show');
+//     }, 5000);
+// }
 
 
 

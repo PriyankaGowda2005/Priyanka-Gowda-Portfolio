@@ -573,39 +573,39 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section section-alt" id="contact">
+     <section class="section" id="contact">
         <div class="container">
-            <h2 class="section-title fade-in">Get In Touch</h2>
-            <p class="section-subtitle fade-in"><h1>I AM OPEN TO WORK AND NETWORK</h1></p>
-            <br>
-            <h4>If you have an exciting project in mind, want to collaborate, or simply wish to connect, let's
-                initiate a conversation.</h4>
-            <br>
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-subtitle">
+                <h1>I AM OPEN TO WORK AND NETWORK</h1>
+                <br>
+                <h4>If you have an exciting project in mind, want to collaborate, or simply wish to connect, let's initiate a conversation.</h4>
+            </div>
+            
             <div class="contact-grid">
-                <div class="contact-form fade-in">
+                <div class="contact-form">
                     <form id="contact-form">
                         <div id="form-alert" class="alert"></div>
                         
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                             </div>
                             <div class="form-group">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" id="email" class="form-control" placeholder="your@email.com" required>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com" required>
                             </div>
                         </div>
                         
                         <div class="form-group">
                             <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" class="form-control" placeholder="How can I help you?" required>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="How can I help you?" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="message" class="form-label">Message</label>
-                            <textarea id="message" class="form-control" rows="5" placeholder="Your message here..." required></textarea>
+                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Your message here..." required></textarea>
                         </div>
                         
                         <button type="submit" class="btn btn-primary" id="submit-btn">
@@ -615,7 +615,7 @@
                     </form>
                 </div>
 
-                <div class="contact-info fade-in">
+                <div class="contact-info">
                     <h3 style="margin-bottom: 2rem; color: var(--text-primary);">Connect With Me</h3>
                     
                     <div class="contact-item">
@@ -624,7 +624,7 @@
                         </div>
                         <div>
                             <h4>Email</h4>
-                            <a href="mailto:priyanka.636192@gmail.com" style="color: var(--text-secondary);">priyanka.636192@gmail.com</a>
+                            <a href="mailto:priyanka.636192@gmail.com">priyanka.636192@gmail.com</a>
                         </div>
                     </div>
                     
@@ -634,7 +634,7 @@
                         </div>
                         <div>
                             <h4>Phone</h4>
-                            <a href="tel:+916361922126" style="color: var(--text-secondary);">+91-6361922126</a>
+                            <a href="tel:+916361922126">+91-6361922126</a>
                         </div>
                     </div>
                     
@@ -670,30 +670,91 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Priyanka Gowda. Made with ❤️ by Priyanka Gowda</p>
-            <div>
-                <button class="theme-toggle" id="footer-theme-toggle" style="background: none; border: none; color: var(--text-secondary); cursor: pointer; padding: 0.5rem;">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script> 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!-- CRITICAL: EmailJS CDN must be loaded FIRST -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Your JavaScript code AFTER EmailJS loads -->
     <script>
+        // Wait for EmailJS to be ready
         (function() {
-            emailjs.init("priyanka.636192"); // Replace with your EmailJS user ID
+            console.log('Initializing EmailJS...');
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init('KHYUKWuIOzs8rGb2I');
+                console.log('EmailJS initialized successfully');
+            } else {
+                console.error('EmailJS not loaded!');
+                return;
+            }
         })();
+
+        // Contact form handling
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, setting up contact form...');
+            
+            const contactForm = document.getElementById('contact-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const formAlert = document.getElementById('form-alert');
+
+            if (!contactForm) {
+                console.error('Contact form not found!');
+                return;
+            }
+
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                console.log('Form submitted');
+                
+                // Show loading state
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                
+                // Hide previous alerts
+                formAlert.classList.remove('show');
+
+                // Get form data
+                const templateParams = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+
+                console.log('Template params:', templateParams);
+
+                // Validate data
+                if (!templateParams.name || !templateParams.email || !templateParams.subject || !templateParams.message) {
+                    formAlert.textContent = "Please fill in all fields.";
+                    formAlert.className = "alert alert-error show";
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                    return;
+                }
+
+                try {
+                    console.log('Sending email via EmailJS...');
+                    const response = await emailjs.send('service_d8sfxs9', 'template_3ernr8k', templateParams);
+                    console.log('EmailJS response:', response);
+                    
+                    // Show success message
+                    formAlert.textContent = "Message sent successfully! I'll get back to you soon.";
+                    formAlert.className = "alert alert-success show";
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                } catch (error) {
+                    console.error('EmailJS Error:', error);
+                    
+                    // Show error message
+                    formAlert.textContent = "Failed to send message. Please try again or contact me directly at priyanka.636192@gmail.com";
+                    formAlert.className = "alert alert-error show";
+                } finally {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                }
+            });
+        });
     </script>
 </body>
 </html>
