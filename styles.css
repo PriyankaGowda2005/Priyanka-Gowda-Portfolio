@@ -204,8 +204,8 @@
         }
 
 .profile-image {
-    width: 320px; /* slightly smaller */
-    height: 320px;
+    width: 400px; /* slightly smaller */
+    height: 400px;
     border-radius: 50%;
     object-fit: cover;
     transform: scale(0.8); /* zooms out */
