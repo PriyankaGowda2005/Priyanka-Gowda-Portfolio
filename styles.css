@@ -203,15 +203,18 @@
             justify-content: center;
         }
 
-        .profile-image {
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 8px solid var(--primary-color);
-            box-shadow: var(--shadow-lg);
-            transition: transform 0.3s ease;
-        }
+.profile-image {
+    width: 320px; /* slightly smaller */
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: scale(0.8); /* zooms out */
+    border: 8px solid var(--primary-color);
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease;
+}
+
+
 
         .profile-image:hover {
             transform: scale(1.05);
