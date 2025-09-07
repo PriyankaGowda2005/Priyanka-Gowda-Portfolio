@@ -12,9 +12,9 @@
             --accent-color: #06b6d4;
             --text-primary: #1f2937;
             --text-secondary: #6b7280;
-            --bg-primary: #ffffff;
-            --bg-secondary: #afcde7;
-            --border-color: #9ab5e8;
+            --bg-primary: #f0f0f0;
+            --bg-secondary: #8ecaff;
+            --border-color: #02266e;
             --shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
             --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
@@ -541,6 +541,275 @@
         }
 
         /* Projects Section */
+        /* Repository Cards Styling */
+.repo-card {
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.repo-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #64ffda, #00bcd4, #2196f3);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.repo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 8px 25px rgba(100, 255, 218, 0.15),
+    0 4px 15px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-color: rgba(100, 255, 218, 0.4);
+}
+
+.repo-card:hover::before {
+  transform: translateX(0);
+}
+
+/* Repository Header */
+.repo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.repo-header h3 {
+  color: #64ffda;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.repo-header h3:hover {
+  color: #ffffff;
+}
+
+.repo-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #8892b0;
+}
+
+.repo-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.repo-stat::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.repo-stat.stars::before {
+  background: #ffd700;
+}
+
+.repo-stat.forks::before {
+  background: #64ffda;
+}
+
+.repo-stat.language::before {
+  background: #ff6b6b;
+}
+
+/* Repository Description */
+.repo-description {
+  color: #ccd6f6;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+/* Repository Footer */
+.repo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(100, 255, 218, 0.1);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.repo-tech-stack {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  background: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(100, 255, 218, 0.2);
+  border-color: rgba(100, 255, 218, 0.4);
+  transform: translateY(-1px);
+}
+
+.repo-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.repo-link {
+  color: #8892b0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(136, 146, 176, 0.3);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.repo-link:hover {
+  color: #64ffda;
+  border-color: rgba(100, 255, 218, 0.5);
+  background: rgba(100, 255, 218, 0.05);
+}
+
+.repo-link.github::before {
+  content: '🔗';
+}
+
+.repo-link.demo::before {
+  content: '🚀';
+}
+
+/* Grid Layout for Repository Cards */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Loading State */
+.repo-card.loading {
+  background: linear-gradient(145deg, #1a1a2e, #16213e);
+  animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+.repo-card.loading .repo-header h3,
+.repo-card.loading .repo-description {
+  background: linear-gradient(90deg, #2a2a4a, #3a3a5a, #2a2a4a);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+  color: transparent;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .repo-card {
+    padding: 1.25rem;
+  }
+  
+  .repo-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .repo-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .repo-stats {
+    gap: 0.75rem;
+  }
+}
+
+/* Special Styles for Featured Repositories */
+.repo-card.featured {
+  background: linear-gradient(145deg, #1a2332, #1e2a3a);
+  border-color: rgba(100, 255, 218, 0.4);
+  box-shadow: 
+    0 6px 20px rgba(100, 255, 218, 0.1),
+    0 4px 15px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.repo-card.featured::before {
+  height: 3px;
+  background: linear-gradient(90deg, #64ffda, #00bcd4, #2196f3, #9c27b0);
+}
+
+.repo-card.featured .repo-header h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+/* Empty State */
+.no-repos {
+  text-align: center;
+  color: #8892b0;
+  font-size: 1.1rem;
+  padding: 3rem;
+  background: rgba(26, 26, 46, 0.5);
+  border-radius: 12px;
+  border: 1px dashed rgba(100, 255, 218, 0.3);
+}
+
+.no-repos::before {
+  content: '📦';
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
         .projects-filter {
             display: flex;
             justify-content: center;
@@ -690,7 +959,6 @@
             font-size: 0.9rem;
             color: var(--text-secondary);
         }
-
         /* Achievements Section */
         .achievements-grid {
             display: grid;
