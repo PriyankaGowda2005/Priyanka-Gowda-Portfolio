@@ -268,53 +268,57 @@ function updateRepositories(repos) {
                 });
             });
         });
+        // Initialize EmailJS with your User ID
+// Initialize EmailJS with your User ID
+emailjs.init('duSFSgzTE9bLs_4ty');
 
-        // Contact Form Handling
-        const contactForm = document.getElementById('contact-form');
-        const formAlert = document.getElementById('form-alert');
-        const submitBtn = document.getElementById('submit-btn');
+const contactForm = document.getElementById('contact-form');
+const formAlert = document.getElementById('form-alert');
+const submitBtn = document.getElementById('submit-btn');
 
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            // Show loading state
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Show loading state
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
 
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                subject: formData.get('subject'),
-                message: formData.get('message')
-            };
+    // Get form data
+    const formData = new FormData(contactForm);
+    const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        subject: formData.get('subject'),
+        message: formData.get('message')
+    };
 
-            try {
-                // Simulate form submission (replace with actual service)
-                await new Promise(resolve => setTimeout(resolve, 1000));
-                
-                // Show success message
-                showAlert('Thank you for your message! I\'ll get back to you soon.', 'success');
-                contactForm.reset();
-                
-            } catch (error) {
-                showAlert('Sorry, there was an error sending your message. Please try again.', 'error');
-            } finally {
-                // Reset button
-                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-                submitBtn.disabled = false;
-            }
-        });
+    try {
+        // Send the email via EmailJS
+        await emailjs.send('service_t0l1aeh', 'template_3ernr8k', data);
 
-        function showAlert(message, type) {
-            formAlert.textContent = message;
-            formAlert.className = `alert alert-${type} show`;
-            
-            setTimeout(() => {
-                formAlert.classList.remove('show');
-            }, 5000);
-        }
+        // Show success message
+        showAlert("Thank you for your message! I'll get back to you soon.", 'success');
+        contactForm.reset();
+    } catch (error) {
+        console.error('EmailJS Error:', error);
+        showAlert('Sorry, there was an error sending your message. Please try again.', 'error');
+    } finally {
+        // Reset button
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+        submitBtn.disabled = false;
+    }
+});
+
+function showAlert(message, type) {
+    formAlert.textContent = message;
+    formAlert.className = `alert alert-${type} show`;
+    
+    setTimeout(() => {
+        formAlert.classList.remove('show');
+    }, 5000);
+}
+
+
 
         // Navbar scroll effect
         const navbar = document.getElementById('navbar');
