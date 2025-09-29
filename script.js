@@ -13,10 +13,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function toggleTheme() {
+        // Add transition class for smooth theme switching
+        body.classList.add('theme-transitioning');
+        
         body.classList.toggle('dark');
         const isDark = body.classList.contains('dark');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
         updateThemeIcons(isDark);
+        
+        // Remove transition class after animation completes
+        setTimeout(() => {
+            body.classList.remove('theme-transitioning');
+        }, 500);
     }
 
     function updateThemeIcons(isDark) {
@@ -39,33 +47,98 @@ document.addEventListener('DOMContentLoaded', function() {
         footerThemeToggle.addEventListener('click', toggleTheme);
     }
 
-    // Mobile Menu Toggle
+    // Enhanced Mobile Menu Toggle
     const mobileMenu = document.getElementById('mobile-menu');
     const navLinks = document.getElementById('nav-links');
 
     if (mobileMenu && navLinks) {
         mobileMenu.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         });
     }
 
-    // Smooth Scrolling
+    // Enhanced Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
                 });
             }
             // Close mobile menu if open
-            if (window.innerWidth <= 768 && navLinks) {
-                navLinks.style.display = 'none';
+            if (navLinks && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
             }
         });
     });
+
+    // Enhanced Navbar Scroll Effect
+    const navbar = document.getElementById('navbar');
+    let lastScrollTop = 0;
+    let ticking = false;
+
+    function updateNavbar() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        
+        // Hide/show navbar on scroll
+        if (scrollTop > lastScrollTop && scrollTop > 200) {
+            // Scrolling down
+            navbar.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling up
+            navbar.style.transform = 'translateY(0)';
+        }
+        
+        lastScrollTop = scrollTop;
+        ticking = false;
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(updateNavbar);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', requestTick, { passive: true });
 
     // Back to Top Button
     const backToTop = document.getElementById('back-to-top');
@@ -87,21 +160,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Intersection Observer for Animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+        // Enhanced Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Add stagger effect for multiple elements
+                    const siblings = Array.from(entry.target.parentNode.children);
+                    const index = siblings.indexOf(entry.target);
+                    entry.target.style.animationDelay = `${index * 0.15}s`;
+                    
+                    // Add random animation classes for variety
+                    const animationClasses = ['fade-in', 'slide-in-left', 'slide-in-right', 'scale-in'];
+                    const randomClass = animationClasses[Math.floor(Math.random() * animationClasses.length)];
+                    entry.target.classList.add(randomClass);
+                }
+            });
+        }, observerOptions);
 
-    // Only observe elements that exist
+    // Observe all fade-in elements
     const fadeInElements = document.querySelectorAll('.fade-in');
     if (fadeInElements.length > 0) {
         fadeInElements.forEach(el => {
@@ -109,15 +192,60 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Enhanced Progress Bar Animation
+    const progressObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const progressBars = entry.target.querySelectorAll('.progress-fill');
+                progressBars.forEach((bar, index) => {
+                    const width = bar.style.width;
+                    bar.style.width = '0%';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, index * 200);
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.about-stats').forEach(el => {
+        progressObserver.observe(el);
+    });
+
     // GitHub API Integration
     async function fetchGitHubData() {
         try {
-            // Fetch user stats
-            const userResponse = await fetch('https://api.github.com/users/priyankapinky2004');
-            const userData = await userResponse.json();
+            // Show loading state
+            const githubStats = document.getElementById('github-stats');
+            const githubRepos = document.getElementById('github-repos');
+            
+            if (githubStats) {
+                githubStats.innerHTML = `
+                    <div class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                `;
+            }
+            
+            if (githubRepos) {
+                githubRepos.innerHTML = `
+                    <div class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                `;
+            }
 
-            // Fetch repositories
-            const reposResponse = await fetch('https://api.github.com/users/priyankapinky2004/repos?sort=updated&per_page=20');
+            // Fetch user stats and repositories in parallel
+            const [userResponse, reposResponse] = await Promise.all([
+                fetch('https://api.github.com/users/priyankapinky2004'),
+                fetch('https://api.github.com/users/priyankapinky2004/repos?sort=updated&per_page=30&type=owner')
+            ]);
+
+            if (!userResponse.ok || !reposResponse.ok) {
+                throw new Error(`GitHub API error: ${userResponse.status} ${reposResponse.status}`);
+            }
+
+            const userData = await userResponse.json();
             const reposData = await reposResponse.json();
 
             // Update GitHub stats
@@ -134,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (githubStats) {
                 githubStats.innerHTML = `
                     <div class="stat-box">
-                        <span class="stat-number">Error</span>
+                        <span class="stat-number">⚠️</span>
                         <span class="stat-label">Unable to load GitHub data</span>
                     </div>
                 `;
@@ -142,7 +270,15 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (githubRepos) {
                 githubRepos.innerHTML = `
-                    <p style="text-align: center; color: var(--text-secondary);">Unable to load repositories. Please check the GitHub links in the projects above.</p>
+                    <div class="no-repos">
+                        <p>Unable to load repositories. Please check your internet connection or try again later.</p>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">
+                            You can still view my projects by clicking the GitHub links in the featured projects above.
+                        </p>
+                        <button onclick="retryGitHubData()" class="btn btn-primary" style="margin-top: 1rem;">
+                            <i class="fas fa-redo"></i> Retry
+                        </button>
+                    </div>
                 `;
             }
         }
@@ -179,10 +315,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const githubRepos = document.getElementById('github-repos');
         if (!githubRepos) return;
 
-        const recentRepos = reposData.slice(0, 6);
-        
-        githubRepos.innerHTML = recentRepos.map(repo => `
-            <div class="repo-card">
+        // Filter out forked repos and the username repo, then take the first 6
+        const filteredRepos = reposData
+            .filter(repo => !repo.fork && repo.name !== 'priyankapinky2004')
+            .slice(0, 6);
+
+        if (filteredRepos.length === 0) {
+            githubRepos.innerHTML = `
+                <div class="no-repos">
+                    <p>No additional repositories found.</p>
+                </div>
+            `;
+            return;
+        }
+
+        githubRepos.innerHTML = filteredRepos.map(repo => `
+            <div class="repo-card fade-in">
                 <div class="repo-header">
                     <h4>${repo.name}</h4>
                     <div class="repo-stats">
@@ -199,7 +347,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
         `).join('');
+
+        // Re-initialize intersection observer for new elements
+        const newCards = githubRepos.querySelectorAll('.repo-card');
+        newCards.forEach(card => {
+            observer.observe(card);
+        });
     }
+
+
+    // Retry function for failed GitHub API calls
+    window.retryGitHubData = function() {
+        console.log('Retrying GitHub data fetch...');
+        fetchGitHubData();
+    };
+
 
     // Initialize GitHub data if elements exist
     if (document.getElementById('github-stats') || document.getElementById('github-repos')) {
@@ -292,20 +454,22 @@ document.addEventListener('DOMContentLoaded', function() {
         // Back to Top Button
         const backToTop = document.getElementById('back-to-top');
 
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
-        });
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+        if (backToTop) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
             });
-        });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
 
         // Intersection Observer for Animations
         const observerOptions = {
@@ -452,28 +616,132 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Project Filter Functionality
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card[data-category]');
+        function initializeProjectFilters() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            console.log('Initializing filters, found buttons:', filterButtons.length);
 
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
+            if (filterButtons.length === 0) {
+                console.error('No filter buttons found!');
+                return;
+            }
 
-                const filter = button.getAttribute('data-filter');
+            filterButtons.forEach(button => {
+                if (button) {
+                    button.addEventListener('click', function() {
+                        console.log('Filter button clicked:', this.textContent);
+                        
+                        // Remove active class from all buttons
+                        filterButtons.forEach(btn => {
+                            if (btn && btn.classList) {
+                                btn.classList.remove('active');
+                            }
+                        });
+                        
+                        // Add active class to clicked button
+                        if (this.classList) {
+                            this.classList.add('active');
+                        }
 
-                projectCards.forEach(card => {
-                    if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
-                        card.style.display = 'block';
-                        card.style.animation = 'fadeIn 0.5s ease forwards';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
+                        const filter = this.getAttribute('data-filter');
+                        console.log('Filter value:', filter);
+                        
+                        // Get only the static project cards (not GitHub repos)
+                        const projectCards = document.querySelectorAll('.project-card[data-category]');
+                        console.log('Found project cards:', projectCards.length);
+
+                        projectCards.forEach(card => {
+                            if (card) {
+                                const cardCategory = card.getAttribute('data-category');
+                                console.log('Card category:', cardCategory, 'Filter:', filter);
+                                
+                                // Show card if:
+                                // 1. Filter is 'all' - show everything
+                                // 2. Filter is 'featured' - show only featured projects
+                                // 3. Filter matches any category in the card's data-category
+                                let shouldShow = false;
+                                
+                                if (filter === 'all') {
+                                    shouldShow = true;
+                                } else if (filter === 'featured') {
+                                    shouldShow = cardCategory && cardCategory.includes('featured');
+                                } else {
+                                    shouldShow = cardCategory && cardCategory.includes(filter);
+                                }
+                                
+                                console.log('Should show card:', shouldShow);
+                                
+                                if (shouldShow) {
+                                    card.style.display = 'block';
+                                    card.style.opacity = '1';
+                                    card.style.animation = 'fadeIn 0.5s ease forwards';
+                                } else {
+                                    card.style.display = 'none';
+                                    card.style.opacity = '0';
+                                }
+                            }
+                        });
+
+                        // GitHub repos always stay visible regardless of filter
+                        const repoCards = document.querySelectorAll('.repo-card');
+                        repoCards.forEach(card => {
+                            if (card) {
+                                card.style.display = 'block';
+                            }
+                        });
+                    });
+                }
             });
-        });
+        }
+
+        // Initialize filters when DOM is ready with a small delay
+        setTimeout(() => {
+            initializeProjectFilters();
+        }, 100);
+
+        // Test function to verify filters work
+        window.testFilters = function() {
+            console.log('Testing filters...');
+            const buttons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.project-card[data-category]');
+            
+            console.log('Filter buttons found:', buttons.length);
+            console.log('Project cards found:', cards.length);
+            
+            cards.forEach((card, index) => {
+                console.log(`Card ${index + 1}:`, card.getAttribute('data-category'));
+            });
+            
+            // Test AI filter
+            const aiButton = document.querySelector('[data-filter="ai"]');
+            if (aiButton) {
+                console.log('Testing AI filter...');
+                aiButton.click();
+            }
+        };
+
+        // Manual filter function for testing
+        window.filterProjects = function(filterType) {
+            console.log('Manual filter:', filterType);
+            const cards = document.querySelectorAll('.project-card[data-category]');
+            
+            cards.forEach(card => {
+                if (card) {
+                    const category = card.getAttribute('data-category');
+                    let show = false;
+                    
+                    if (filterType === 'all') {
+                        show = true;
+                    } else if (filterType === 'featured') {
+                        show = category && category.includes('featured');
+                    } else {
+                        show = category && category.includes(filterType);
+                    }
+                    
+                    card.style.display = show ? 'block' : 'none';
+                    console.log(`Card "${category}": ${show ? 'SHOW' : 'HIDE'}`);
+                }
+            });
+        };
         // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         let lastScrollTop = 0;
@@ -512,11 +780,36 @@ document.addEventListener('DOMContentLoaded', function() {
             progressObserver.observe(el);
         });
 
-        // Initialize
+        // Enhanced Typing Effect
+        function typeWriter(element, text, speed = 50) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            
+            type();
+        }
+
+        // Initialize enhanced features
         document.addEventListener('DOMContentLoaded', () => {
             fetchGitHubData();
             
-            // Add some delay for better UX
+            // Initialize typing effect for hero subtitle
+            const subtitle = document.querySelector('.hero-content .subtitle');
+            if (subtitle) {
+                const originalText = subtitle.textContent;
+                setTimeout(() => {
+                    typeWriter(subtitle, originalText, 30);
+                }, 1000);
+            }
+            
+            // Add stagger animation to cards
             setTimeout(() => {
                 document.querySelectorAll('.fade-in').forEach((el, index) => {
                     setTimeout(() => {
@@ -536,17 +829,32 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Add smooth hover effects to cards
+        // Enhanced hover effects with advanced animations
         const cards = document.querySelectorAll('.project-card, .skill-card, .achievement-card, .experience-card');
         
         cards.forEach(card => {
             card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px)';
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+                this.style.boxShadow = 'var(--shadow-2xl)';
+                
+                // Add subtle glow effect
+                this.style.filter = 'brightness(1.05)';
             });
             
             card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
+                this.style.transform = 'translateY(0) scale(1)';
+                this.style.boxShadow = 'var(--shadow-md)';
+                this.style.filter = 'brightness(1)';
             });
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
         });
 
         // Performance optimization: Lazy load images
@@ -566,6 +874,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 imageObserver.observe(img);
             });
         }
+
+        // Accessibility improvements
+        document.addEventListener('keydown', (e) => {
+            // Skip to main content with Tab key
+            if (e.key === 'Tab' && !e.shiftKey && document.activeElement === document.body) {
+                const mainContent = document.querySelector('main') || document.querySelector('.hero');
+                if (mainContent) {
+                    mainContent.focus();
+                    e.preventDefault();
+                }
+            }
+        });
+
+        // Add focus indicators for keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-navigation');
+            }
+        });
+
+        document.addEventListener('mousedown', () => {
+            document.body.classList.remove('keyboard-navigation');
+        });
+
+        // Preload critical resources
+        const preloadLink = document.createElement('link');
+        preloadLink.rel = 'preload';
+        preloadLink.href = 'img/profile.jpeg';
+        preloadLink.as = 'image';
+        document.head.appendChild(preloadLink);
 
         // Add typing effect to hero subtitle
         function typeWriter(element, text, speed = 50) {
