@@ -13,7 +13,7 @@ Welcome to my personal portfolio! This website is designed and developed using *
 ## 🚀 Live Demo
 
 👉 [Click here to view my portfolio]
-[(https://priyankapinky2004.github.io/Priyanka-Gowda-Portfolio/)]
+[[(https://priyankapinky2004.github.io/Priyanka-Gowda-Portfolio/)]](https://priyanka-gowda-portfolio.vercel.app/)
 
 ## 🛠️ Tech Stack
 
