@@ -376,35 +376,6 @@
             }
         }
 
-        .hero-content .subtitle {
-            font-size: 1.2rem !important;
-            color: #cbd5e1 !important;
-            margin-bottom: 1.5rem !important;
-            font-weight: normal !important;
-            text-shadow: none !important;
-            letter-spacing: normal !important;
-            word-spacing: normal !important;
-            text-transform: none !important;
-            line-height: normal !important;
-            font-family: Arial, sans-serif !important;
-            opacity: 1 !important;
-            transform: none !important;
-            animation: none !important;
-            display: block !important;
-            white-space: normal !important;
-            text-align: left !important;
-            padding: 0 !important;
-            border: none !important;
-            background: none !important;
-            box-shadow: none !important;
-            filter: none !important;
-            transition: none !important;
-        }
-
-        .dark .hero-content .subtitle {
-            color: #cbd5e1 !important;
-            text-shadow: none !important;
-        }
 
         .hero-content p {
             font-size: 1rem !important;
@@ -2464,6 +2435,35 @@
             background: rgba(239, 68, 68, 0.1);
             border: 1px solid rgba(239, 68, 68, 0.3);
             color: #dc2626;
+        }
+
+        /* FINAL FIX FOR SUBTITLE - OVERRIDE EVERYTHING */
+        .subtitle {
+            font-size: 18px !important;
+            color: #cbd5e1 !important;
+            font-family: Arial, sans-serif !important;
+            font-weight: normal !important;
+            letter-spacing: 0px !important;
+            word-spacing: 0px !important;
+            line-height: 1.4 !important;
+            margin: 0 0 24px 0 !important;
+            padding: 0 !important;
+            text-transform: none !important;
+            text-shadow: none !important;
+            text-align: left !important;
+            opacity: 1 !important;
+            transform: none !important;
+            animation: none !important;
+            transition: none !important;
+            filter: none !important;
+            background: none !important;
+            border: none !important;
+            box-shadow: none !important;
+            display: block !important;
+            white-space: normal !important;
+            overflow: visible !important;
+            position: static !important;
+            z-index: auto !important;
         }
         }
         }
