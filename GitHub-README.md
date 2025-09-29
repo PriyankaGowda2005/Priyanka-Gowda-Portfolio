@@ -1,36 +1,19 @@
 <img src="banner_github.png" alt="GitHub Banner" width="100%" />
 <br clear="both">
 
-<div align="center">
-  <img src="img/profile.jpeg" alt="Priyanka Gowda" width="200" style="border-radius: 50%;">
-  
-  ### 🚀 **Full Stack Developer | AI/ML Enthusiast | Project Lead**
-  
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/priyankapinky2004)
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/priyanka-gowda-4bb0201b4)
-  [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://priyankapinky2004.github.io/Priyanka-Gowda-Portfolio/)
-</div>
+<h1 align="left">Hello World! I'm Priyanka Gowda 👋🏼</h1>
 
----
+###
 
-## 🎯 About Me
+<h3 align="left">🎓 Final Year ISE Student | CGPA: 9.57<br>🏆 Hackathon Enthusiast   | 4th Place – IIT Bombay KoiiHack | 2nd Place – Dasara Hackathon<br>👩‍🏫 Mentor & Workshop Instructor | Project Lead at CODE_X  <br>🌱 Passionate about Tech, Innovation & Learning</h3>
 
-Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing B.E in Information Science & Engineering with a **GPA of 9.57**. I specialize in building scalable web applications and exploring cutting-edge AI/ML technologies. Currently serving as **Project Lead at CODE_X** and actively contributing to the tech community through workshops and mentorship.
+###
 
-### 🏆 Key Achievements
+<br clear="both">
 
-- **4th Place** - KoiiHack: Innovate & Build (IIT Bombay Techfest 2024)
-- **2nd Place** - Dasara Hackathon (Mipzo Private Limited)
-- **1st Prize** - Krishi Graha (AICTE IDEA Lab Innovation Competition)
-- **Top 5%** - NPTEL Certification in Privacy and Security
-- **Government Scholarship Laptop** - District topper in 10th grade
-- **400+** LeetCode Problems Solved
-- **16+** Projects Completed
-- **15+** Professional Certifications
+<h2 align="left">🖥 Tech Stack: What I Know & Love 💙</h2>
 
----
-
-## 🖥 Tech Stack
+###
 
 <div align="center">
   <h3>Frontend Development</h3>
@@ -73,23 +56,44 @@ Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing 
   <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
 </div>
 
----
+###
 
-## 🏆 LeetCode Journey
+<br clear="both">
+
+<h2 align="left">💡 About Me: Learning, Building, and Growing Every Day</h2>
+
+<div align="left">
+  <p>👋 <strong>Hey there!</strong> I'm Priyanka, a Final Year Information Science Engineering student with a CGPA of <strong>9.57</strong>. I'm passionate about technology, problem-solving, and continuous learning.</p>
+  
+  <p>🚀 I actively participate in <strong>hackathons</strong> and was honored to secure <strong>4th place at IIT Bombay KoiiHack</strong>. I also enjoy mentoring and conducting workshops, sharing knowledge, and helping others grow.</p>
+  
+  <p>👩‍💻 Currently, I'm <strong>Project Lead at CODE_X</strong>, where I lead and collaborate on exciting tech projects. My goal is to explore <strong>AI, Blockchain, and Full Stack Development</strong>.</p>
+  
+  <p>🌟 <strong>Fun Fact:</strong> I believe in the power of technology to solve real-world problems and make a positive impact on society!</p>
+</div>
+
+###
+
+<br clear="both">
+
+<h2>🏆 LeetCode Journey 🚀</h2>
 
 - **Total Problems Solved:** 400+ / 3506
 - **Easy:** 150+ / 870 | **Medium:** 200+ / 1819 | **Hard:** 50+ / 817
 - **Total Submissions (Past Year):** 500+
 - **Total Active Days:** 100+
 - **Max Streak:** 50+ Days 🔥
-- **Recent Badge:** 100 Days Badge 2025 🎖️
+- **Recent Badge:** 100 Days Badge 2025 🎖️  
+  <br>
 
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/66yUFVv66a/)
 [![100 Days Badge](https://img.shields.io/badge/100%20Days%20Badge-2025-FF6B6B?style=for-the-badge&logo=trophy&logoColor=white)](https://leetcode.com/u/66yUFVv66a/)
 
----
+###
 
-## 🌟 Featured Projects
+<br clear="both">
+
+<h2>🌟 Featured Projects</h2>
 
 <div align="center">
   <table>
@@ -98,23 +102,19 @@ Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing 
         <img src="https://img.shields.io/badge/AI%20Powered-FF6B6B?style=for-the-badge&logo=robot&logoColor=white" />
         <br><br>
         <strong>Smart Hire</strong><br>
-        <em>AI-powered hiring platform eliminating bias using sentiment analysis, LLMs, and TensorFlow</em><br>
+        <em>AI-powered hiring platform eliminating bias</em><br>
         <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white" />
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" />
         <img src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB" />
-        <br><br>
-        <a href="https://github.com/priyankapinky2004/SmartHire" target="_blank">🔗 GitHub</a>
       </td>
       <td align="center" width="50%">
         <img src="https://img.shields.io/badge/Blockchain-121D33?style=for-the-badge&logo=bitcoin&logoColor=white" />
         <br><br>
         <strong>FactNet</strong><br>
-        <em>Blockchain-powered news verification platform to combat misinformation using AI</em><br>
+        <em>Blockchain-powered news verification</em><br>
         <img src="https://img.shields.io/badge/Blockchain-121D33?style=flat&logo=bitcoin&logoColor=white" />
         <img src="https://img.shields.io/badge/AI-FF6B6B?style=flat&logo=robot&logoColor=white" />
         <img src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB" />
-        <br><br>
-        <a href="https://github.com/priyankapinky2004/FactNet" target="_blank">🔗 GitHub</a>
       </td>
     </tr>
     <tr>
@@ -122,108 +122,40 @@ Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing 
         <img src="https://img.shields.io/badge/Web%20App-4CAF50?style=for-the-badge&logo=web&logoColor=white" />
         <br><br>
         <strong>PrepVerse</strong><br>
-        <em>Web-based learning platform with structured layouts and accessible UI/UX</em><br>
+        <em>Learning platform with accessible UI/UX</em><br>
         <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" />
         <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" />
         <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />
-        <br><br>
-        <a href="https://github.com/priyankapinky2004/PrepVerse" target="_blank">🔗 GitHub</a> | 
-        <a href="https://priyankapinky2004.github.io/PrepVerse/" target="_blank">🌐 Demo</a>
       </td>
       <td align="center" width="50%">
         <img src="https://img.shields.io/badge/Full%20Stack-9C27B0?style=for-the-badge&logo=stackoverflow&logoColor=white" />
         <br><br>
         <strong>Mental Health AI</strong><br>
-        <em>AI-powered platform for mental health tracking with personalized recommendations</em><br>
+        <em>AI-powered mental health tracking</em><br>
         <img src="https://img.shields.io/badge/AI-FF6B6B?style=flat&logo=robot&logoColor=white" />
         <img src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB" />
         <img src="https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white" />
-        <br><br>
-        <a href="https://github.com/priyankapinky2004/MentalHealthAI" target="_blank">🔗 GitHub</a>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="50%">
-        <img src="https://img.shields.io/badge/Web%20App-FF9800?style=for-the-badge&logo=web&logoColor=white" />
-        <br><br>
-        <strong>Cloud-Based To-Do List</strong><br>
-        <em>Full-stack to-do application with vanilla JavaScript and Node.js/Express backend</em><br>
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />
-        <img src="https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white" />
-        <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black" />
-        <br><br>
-        <a href="https://github.com/priyankapinky2004/CloudTodoList" target="_blank">🔗 GitHub</a>
-      </td>
-      <td align="center" width="50%">
-        <img src="https://img.shields.io/badge/Portfolio-6366F1?style=for-the-badge&logo=portfolio&logoColor=white" />
-        <br><br>
-        <strong>Dynamic Portfolio</strong><br>
-        <em>Modern portfolio with GitHub API integration and real-time project filtering</em><br>
-        <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" />
-        <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" />
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />
-        <br><br>
-        <a href="https://priyankapinky2004.github.io/Priyanka-Gowda-Portfolio/" target="_blank">🌐 Live Demo</a>
       </td>
     </tr>
   </table>
 </div>
 
----
+###
 
-## 📊 GitHub Statistics
+<br clear="both">
+
+<h2>📊 My GitHub Activity & Contributions</h2>
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=priyankapinky2004&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false" height="150" alt="stats graph"  />
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=priyankapinky2004&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="languages graph"  />
 </div>
 
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=priyankapinky2004&theme=dracula&hide_border=false" alt="GitHub Streak" />
-</div>
+###
 
----
+<br clear="both">
 
-## 🔥 GitHub Activity Streak
-
-<div align="center">
-  <h3>📊 **632 submissions in the past one year**</h3>
-  <p>Total active days: <strong>179</strong> | Max streak: <strong>41</strong></p>
-</div>
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="33%">
-        <h3>📈 Total Contributions</h3>
-        <img src="https://img.shields.io/badge/352%20Contributions-FF6B6B?style=for-the-badge&logo=github&logoColor=white" />
-        <br><br>
-        <em>Jul 23, 2023 - Present</em>
-      </td>
-      <td align="center" width="33%">
-        <h3>🔥 Current Streak</h3>
-        <img src="https://img.shields.io/badge/2%20Days%20Streak-FFA500?style=for-the-badge&logo=fire&logoColor=white" />
-        <br><br>
-        <em>Sep 29 - Sep 30</em>
-      </td>
-      <td align="center" width="33%">
-        <h3>🏆 Longest Streak</h3>
-        <img src="https://img.shields.io/badge/10%20Days%20Streak-00FF00?style=for-the-badge&logo=trophy&logoColor=black" />
-        <br><br>
-        <em>Sep 4 - Sep 13</em>
-      </td>
-    </tr>
-  </table>
-</div>
-
-<div align="center">
-  <h3>📅 Contribution Calendar</h3>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=priyankapinky2004&theme=dracula&hide_border=true&area=true" alt="GitHub Activity Graph" />
-</div>
-
----
-
-## 🏆 Achievements & Certifications
+<h2>🏆 Achievements & Certifications</h2>
 
 <div align="center">
   <img src="https://img.shields.io/badge/4th%20Place%20-%20IIT%20Bombay%20KoiiHack-FFD700?style=for-the-badge&logo=trophy&logoColor=black" />
@@ -235,12 +167,23 @@ Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing 
   <img src="https://img.shields.io/badge/Microsoft%20Certified-0078D4?style=flat&logo=microsoft&logoColor=white" />
   <img src="https://img.shields.io/badge/Cisco%20Certified-1BA1E2?style=flat&logo=cisco&logoColor=white" />
   <img src="https://img.shields.io/badge/Postman%20Expert-FF6C37?style=flat&logo=postman&logoColor=white" />
-  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=power-bi&logoColor=black" />
 </div>
 
----
+###
 
-## 🌐 Connect with Me
+<br clear="both">
+
+<h2>📈 GitHub Streak & Activity</h2>
+
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=priyankapinky2004&theme=dracula&hide_border=false" alt="GitHub Streak" />
+</div>
+
+###
+
+<br clear="both">
+
+<h2>🌐 Connect with Me</h2>
 
 <div align="left">
   <a href="https://www.linkedin.com/in/priyanka-gowda-4bb0201b4/" target="_blank">
@@ -260,13 +203,17 @@ Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing 
   </a>
 </div>
 
----
+###
+
+<br clear="both">
 
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=6366F1&center=true&vCenter=true&width=435&lines=Full+Stack+Developer;AI%2FML+Enthusiast;Hackathon+Winner;Open+Source+Contributor;Always+Learning+%26+Growing" alt="Typing SVG" />
 </div>
 
----
+###
+
+<br clear="both">
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" />

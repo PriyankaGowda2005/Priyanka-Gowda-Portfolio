@@ -3,7 +3,7 @@
 ## 🚀 **Main Portfolio Launch Post**
 
 ```
-🚀 Excited to share my completely revamped portfolio website! 
+🚀 Excited to share my completely revamped portfolio website!
 
 ✨ **What's New:**
 🔗 Real-time GitHub integration with dynamic project cards
@@ -14,7 +14,7 @@
 
 🏆 **Featured Projects:**
 🤖 Smart Hire - AI-powered hiring platform
-🔗 FactNet - Blockchain news verification system  
+🔗 FactNet - Blockchain news verification system
 📚 PrepVerse - Learning platform with accessible UI
 
 🎓 Currently pursuing B.E in Information Science & Engineering (GPA: 9.57)
@@ -31,7 +31,7 @@ Check out my portfolio: https://priyankapinky2004.github.io/Priyanka-Gowda-Portf
 ## 🎯 **Project Showcase Post**
 
 ```
-🎯 Just completed my latest project - **Smart Hire**! 
+🎯 Just completed my latest project - **Smart Hire**!
 
 An AI-powered hiring platform that eliminates bias using:
 🧠 Machine Learning algorithms
@@ -43,7 +43,7 @@ An AI-powered hiring platform that eliminates bias using:
 
 This project secured 4th place at KoiiHack: Innovate & Build (IIT Bombay Techfest 2024) 🏆
 
-Building solutions that make hiring more equitable and efficient! 
+Building solutions that make hiring more equitable and efficient!
 
 View the code: https://github.com/priyankapinky2004/SmartHire
 
@@ -55,7 +55,7 @@ View the code: https://github.com/priyankapinky2004/SmartHire
 ## 🏆 **Achievement Post**
 
 ```
-🏆 Thrilled to announce that I secured **4th Place** at KoiiHack: Innovate & Build hosted by IIT Bombay Techfest 2024! 
+🏆 Thrilled to announce that I secured **4th Place** at KoiiHack: Innovate & Build hosted by IIT Bombay Techfest 2024!
 
 Presented **FactNet** - a blockchain-powered news verification platform that combats misinformation using AI and decentralized transparency.
 
@@ -101,7 +101,7 @@ Databases: MongoDB, MySQL, Firebase
 📍 **Location:** Hassan, Karnataka, India
 🌐 **Portfolio:** https://priyankapinky2004.github.io/Priyanka-Gowda-Portfolio/
 
-Ready to contribute to innovative projects and grow with amazing teams! 
+Ready to contribute to innovative projects and grow with amazing teams!
 
 #OpenToWork #FullStackDeveloper #AI #MachineLearning #WebDevelopment #Hiring #TechJobs #RemoteWork
 
@@ -132,7 +132,7 @@ Ready to contribute to innovative projects and grow with amazing teams!
 • Exploring advanced cloud technologies
 • Mentoring more students
 
-Grateful for every learning opportunity and excited for what's ahead! 
+Grateful for every learning opportunity and excited for what's ahead!
 
 #Education #Engineering #Learning #Growth #TechEducation #StudentLife #Innovation
 
