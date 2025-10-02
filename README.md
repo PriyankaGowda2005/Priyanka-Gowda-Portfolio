@@ -191,8 +191,8 @@ Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing 
 </div>
 
 <div align="center">
-  <h3>📊 Additional Stats</h3>
-  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=PriyankaGowda2005&theme=dracula&hide_border=false&layout=compact" alt="WakaTime Stats" />
+  <h3>📊 Repository Stats</h3>
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=PriyankaGowda2005&repo=Priyanka-Gowda-Portfolio&theme=dracula&hide_border=false" alt="Portfolio Repo Stats" />
 </div>
 
 ---
