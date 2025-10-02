@@ -173,51 +173,26 @@ Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing 
 ## 📊 GitHub Statistics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=PriyankaGowda2005&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false" height="150" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=PriyankaGowda2005&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="languages graph"  />
+  <img src="https://github-readme-stats.vercel.app/api?username=PriyankaGowda2005&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=false&disable_animations=false&theme=dracula&locale=en&hide_border=false&custom_title=GitHub%20Statistics" height="150" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=PriyankaGowda2005&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=8&theme=dracula&hide_border=false&custom_title=Most%20Used%20Languages" height="150" alt="languages graph"  />
 </div>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=PriyankaGowda2005&theme=dracula&hide_border=false" alt="GitHub Streak" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=PriyankaGowda2005&theme=dracula&hide_border=false&stroke=0000&background=0D1117&ring=5BCDEC&fire=5BCDEC&currStreakLabel=5BCDEC" alt="GitHub Streak" />
 </div>
 
 ---
 
-## 🔥 GitHub Activity Streak
-
-<div align="center">
-  <h3>📊 **632 submissions in the past one year**</h3>
-  <p>Total active days: <strong>179</strong> | Max streak: <strong>41</strong></p>
-</div>
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="33%">
-        <h3>📈 Total Contributions</h3>
-        <img src="https://img.shields.io/badge/352%20Contributions-FF6B6B?style=for-the-badge&logo=github&logoColor=white" />
-        <br><br>
-        <em>Jul 23, 2023 - Present</em>
-      </td>
-      <td align="center" width="33%">
-        <h3>🔥 Current Streak</h3>
-        <img src="https://img.shields.io/badge/2%20Days%20Streak-FFA500?style=for-the-badge&logo=fire&logoColor=white" />
-        <br><br>
-        <em>Sep 29 - Sep 30</em>
-      </td>
-      <td align="center" width="33%">
-        <h3>🏆 Longest Streak</h3>
-        <img src="https://img.shields.io/badge/10%20Days%20Streak-00FF00?style=for-the-badge&logo=trophy&logoColor=black" />
-        <br><br>
-        <em>Sep 4 - Sep 13</em>
-      </td>
-    </tr>
-  </table>
-</div>
+## 🔥 GitHub Activity
 
 <div align="center">
   <h3>📅 Contribution Calendar</h3>
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=PriyankaGowda2005&theme=dracula&hide_border=true&area=true" alt="GitHub Activity Graph" />
+</div>
+
+<div align="center">
+  <h3>📊 Additional Stats</h3>
+  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=PriyankaGowda2005&theme=dracula&hide_border=false&layout=compact" alt="WakaTime Stats" />
 </div>
 
 ---
