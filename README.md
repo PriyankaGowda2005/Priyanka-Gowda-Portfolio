@@ -1,14 +1,13 @@
-
+<img src="banner_github.png" alt="GitHub Banner" width="100%" />
 <br clear="both">
 
 <div align="center">
-  <img src="img/profile.jpeg" alt="Priyanka Gowda" width="200" style="border-radius: 50%;">
   
   ### 🚀 **Full Stack Developer | AI/ML Enthusiast | Project Lead**
   
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/priyankapinky2004)
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PriyankaGowda2005)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/priyanka-gowda-4bb0201b4)
-  [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://priyankapinky2004.github.io/Priyanka-Gowda-Portfolio/)
+  [![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://PriyankaGowda2005.github.io/Priyanka-Gowda-Portfolio/)
 </div>
 
 ---
@@ -103,7 +102,7 @@ Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing 
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" />
         <img src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB" />
         <br><br>
-        <a href="https://github.com/priyankapinky2004/SmartHire" target="_blank">🔗 GitHub</a>
+        <a href="https://github.com/PriyankaGowda2005/SmartHire" target="_blank">🔗 GitHub</a>
       </td>
       <td align="center" width="50%">
         <img src="https://img.shields.io/badge/Blockchain-121D33?style=for-the-badge&logo=bitcoin&logoColor=white" />
@@ -114,7 +113,7 @@ Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing 
         <img src="https://img.shields.io/badge/AI-FF6B6B?style=flat&logo=robot&logoColor=white" />
         <img src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB" />
         <br><br>
-        <a href="https://github.com/priyankapinky2004/FactNet" target="_blank">🔗 GitHub</a>
+        <a href="https://github.com/PriyankaGowda2005/FactNet" target="_blank">🔗 GitHub</a>
       </td>
     </tr>
     <tr>
@@ -127,8 +126,8 @@ Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing 
         <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" />
         <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />
         <br><br>
-        <a href="https://github.com/priyankapinky2004/PrepVerse" target="_blank">🔗 GitHub</a> | 
-        <a href="https://priyankapinky2004.github.io/PrepVerse/" target="_blank">🌐 Demo</a>
+        <a href="https://github.com/PriyankaGowda2005/PrepVerse" target="_blank">🔗 GitHub</a> | 
+        <a href="https://PriyankaGowda2005.github.io/PrepVerse/" target="_blank">🌐 Demo</a>
       </td>
       <td align="center" width="50%">
         <img src="https://img.shields.io/badge/Full%20Stack-9C27B0?style=for-the-badge&logo=stackoverflow&logoColor=white" />
@@ -139,7 +138,7 @@ Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing 
         <img src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB" />
         <img src="https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white" />
         <br><br>
-        <a href="https://github.com/priyankapinky2004/MentalHealthAI" target="_blank">🔗 GitHub</a>
+        <a href="https://github.com/PriyankaGowda2005/MentalHealthAI" target="_blank">🔗 GitHub</a>
       </td>
     </tr>
     <tr>
@@ -152,7 +151,7 @@ Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing 
         <img src="https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white" />
         <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black" />
         <br><br>
-        <a href="https://github.com/priyankapinky2004/CloudTodoList" target="_blank">🔗 GitHub</a>
+        <a href="https://github.com/PriyankaGowda2005/CloudTodoList" target="_blank">🔗 GitHub</a>
       </td>
       <td align="center" width="50%">
         <img src="https://img.shields.io/badge/Portfolio-6366F1?style=for-the-badge&logo=portfolio&logoColor=white" />
@@ -163,7 +162,7 @@ Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing 
         <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" />
         <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />
         <br><br>
-        <a href="https://priyankapinky2004.github.io/Priyanka-Gowda-Portfolio/" target="_blank">🌐 Live Demo</a>
+        <a href="https://PriyankaGowda2005.github.io/Priyanka-Gowda-Portfolio/" target="_blank">🌐 Live Demo</a>
       </td>
     </tr>
   </table>
@@ -174,12 +173,12 @@ Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing 
 ## 📊 GitHub Statistics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=priyankapinky2004&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false" height="150" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=priyankapinky2004&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="languages graph"  />
+  <img src="https://github-readme-stats.vercel.app/api?username=PriyankaGowda2005&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false" height="150" alt="stats graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=PriyankaGowda2005&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="languages graph"  />
 </div>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=priyankapinky2004&theme=dracula&hide_border=false" alt="GitHub Streak" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=PriyankaGowda2005&theme=dracula&hide_border=false" alt="GitHub Streak" />
 </div>
 
 ---
@@ -218,7 +217,7 @@ Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing 
 
 <div align="center">
   <h3>📅 Contribution Calendar</h3>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=priyankapinky2004&theme=dracula&hide_border=true&area=true" alt="GitHub Activity Graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=PriyankaGowda2005&theme=dracula&hide_border=true&area=true" alt="GitHub Activity Graph" />
 </div>
 
 ---
@@ -279,5 +278,5 @@ Passionate **Full Stack Developer** and **AI/ML Enthusiast** currently pursuing 
 ---
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=priyankapinky2004&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=PriyankaGowda2005&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
 </div>
