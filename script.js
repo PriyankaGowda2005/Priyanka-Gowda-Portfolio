@@ -200,6 +200,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 progressBars.forEach((bar, index) => {
                     const width = bar.style.width;
                     bar.style.width = '0%';
+                    bar.style.opacity = '1';
+                    bar.style.visibility = 'visible';
                     setTimeout(() => {
                         bar.style.width = width;
                     }, index * 200);
@@ -237,8 +239,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Fetch user stats and repositories in parallel
             const [userResponse, reposResponse] = await Promise.all([
-                fetch('https://api.github.com/users/priyankapinky2004'),
-                fetch('https://api.github.com/users/priyankapinky2004/repos?sort=updated&per_page=30&type=owner')
+                fetch('https://api.github.com/users/PriyankaGowda2005'),
+                fetch('https://api.github.com/users/PriyankaGowda2005/repos?sort=updated&per_page=30&type=owner')
             ]);
 
             if (!userResponse.ok || !reposResponse.ok) {
@@ -317,7 +319,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Filter out forked repos and the username repo, then take the first 6
         const filteredRepos = reposData
-            .filter(repo => !repo.fork && repo.name !== 'priyankapinky2004')
+            .filter(repo => !repo.fork && repo.name !== 'PriyankaGowda2005')
             .slice(0, 6);
 
         if (filteredRepos.length === 0) {
@@ -367,6 +369,35 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('github-stats') || document.getElementById('github-repos')) {
         fetchGitHubData();
     }
+
+    // Initialize progress bars immediately
+    function initializeProgressBars() {
+        const progressBars = document.querySelectorAll('.progress-fill');
+        progressBars.forEach((bar, index) => {
+            // Force visibility
+            bar.style.opacity = '1';
+            bar.style.visibility = 'visible';
+            bar.style.display = 'block';
+            
+            // Get the target width from the style attribute
+            const targetWidth = bar.getAttribute('style').match(/width:\s*([^;]+)/);
+            const width = targetWidth ? targetWidth[1] : '0%';
+            
+            // Reset to 0 and animate to target
+            bar.style.width = '0%';
+            setTimeout(() => {
+                bar.style.width = width;
+            }, index * 150);
+        });
+    }
+
+    // Initialize progress bars when DOM is ready
+    setTimeout(initializeProgressBars, 300);
+    
+    // Also initialize on window load as backup
+    window.addEventListener('load', () => {
+        setTimeout(initializeProgressBars, 100);
+    });
 });
 
 // Contact Form functionality (separate from DOMContentLoaded to avoid conflicts)
@@ -493,11 +524,11 @@ document.addEventListener('DOMContentLoaded', function() {
         async function fetchGitHubData() {
             try {
                 // Fetch user stats
-                const userResponse = await fetch('https://api.github.com/users/priyankapinky2004');
+                const userResponse = await fetch('https://api.github.com/users/PriyankaGowda2005');
                 const userData = await userResponse.json();
 
                 // Fetch repositories
-                const reposResponse = await fetch('https://api.github.com/users/priyankapinky2004/repos?sort=updated&per_page=20');
+                const reposResponse = await fetch('https://api.github.com/users/PriyankaGowda2005/repos?sort=updated&per_page=20');
                 const reposData = await reposResponse.json();
 
                 // Update GitHub stats
@@ -549,7 +580,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Filter out forked repos and the username repo
             const filteredRepos = repos
-                .filter(repo => !repo.fork && repo.name !== 'priyankapinky2004')
+                .filter(repo => !repo.fork && repo.name !== 'PriyankaGowda2005')
                 .slice(0, 6);
 
             if (filteredRepos.length === 0) {
