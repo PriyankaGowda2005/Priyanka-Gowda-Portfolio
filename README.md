@@ -1,4 +1,4 @@
-<img src="banner_github.png" alt="GitHub Banner" width="100%" />
+<img src="img/portfolio-banner.png" alt="Priyanka Gowda - Portfolio Banner" width="100%" />
 <br clear="both">
 
 <div align="center">
